@@ -3,7 +3,7 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useNavigate } from 'react-router-dom';
 
-import { Button, ErrorText, FormContainer, Input } from './style';
+import { Button, Container, ErrorText, FormContainer, Input, Title } from './style';
 
 const schema = z
     .object({
@@ -42,25 +42,26 @@ export default function RegisterPage() {
     };
 
     return (
-        <FormContainer onSubmit={handleSubmit(onSubmit)}>
+        <Container>
+            <FormContainer onSubmit={handleSubmit(onSubmit)}>
 
-            <Input {...register("name")} placeholder="Name" />
-            {errors.name && <ErrorText>{errors.name.message}</ErrorText>}
+                <Title>Register Account</Title>
+                <Input {...register("name")} placeholder="Name" />
+                {errors.name && <ErrorText>{errors.name.message}</ErrorText>}
 
-            <Input {...register("email")} placeholder="Email" />
-            {errors.email && <ErrorText>{errors.email.message}</ErrorText>}
+                <Input {...register("email")} placeholder="Email" />
+                {errors.email && <ErrorText>{errors.email.message}</ErrorText>}
 
-            <Input type="password" {...register("password")} placeholder="Password" />
-            {errors.password && <ErrorText>{errors.password.message}</ErrorText>}
+                <Input type="password" {...register("password")} placeholder="Password" />
+                {errors.password && <ErrorText>{errors.password.message}</ErrorText>}
 
-            <Input type="password" {...register("confirmPassword")} placeholder="Confirm Password" />
-            {errors.confirmPassword && <ErrorText>{errors.confirmPassword.message}</ErrorText>}
-
-
-            <Button type="submit">Register</Button>
+                <Input type="password" {...register("confirmPassword")} placeholder="Confirm Password" />
+                {errors.confirmPassword && <ErrorText>{errors.confirmPassword.message}</ErrorText>}
 
 
-        </FormContainer>
+                <Button type="submit">Register</Button>
+            </FormContainer>
+        </Container>
     );
 
 

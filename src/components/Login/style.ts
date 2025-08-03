@@ -1,14 +1,5 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-    display: flex;      
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    widht: 100%;
-    background: navy;
-`;
-
 export const FormContainer = styled.form`
     display: flex;
     flex-direction: column;
@@ -18,14 +9,6 @@ export const FormContainer = styled.form`
     padding: 2rem;
     background: white;
     border-radius: 8px;
-`;
-
-export const Title = styled.h1`
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 900;
-    margin-bottom: 1rem;
-    color: #4f46e5;
 `;
 
 export const ErrorText = styled.span`
