@@ -6,7 +6,7 @@ export const Container = styled.div`
     align-items: center;
     height: 100vh;
     widht: 100%;
-    background: navy;
+    background: #F1F5F8;
 `;
 
 export const FormContainer = styled.form`
@@ -25,7 +25,7 @@ export const Title = styled.h1`
     font-size: 2rem;
     font-weight: 900;
     margin-bottom: 1rem;
-    color: #4f46e5;
+    color: #1c2b33;
 `;
 
 export const ErrorText = styled.span`
@@ -47,7 +47,7 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-        background: #4f46e5;
+        background: #0082fb;
         color: white;
         padding: 0.75rem;
         border: none;
@@ -56,6 +56,6 @@ export const Button = styled.button`
         cursor: pointer;
 
         &:hover {
-            background-color: #4338ca;
+            background-color: #0064e0;
         }
 `;
